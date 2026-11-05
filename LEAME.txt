@@ -1,0 +1,13 @@
+Cordial saludo.
+
+En esta actividad se realizó el desarrollo de las pantallas principales de Urban Factory.
+
+Se tomó como base el diseño presentado anteriormente, conservando los colores y gran parte de la interfaz. Sin embargo, 
+durante el desarrollo fue necesario realizar algunos cambios para facilitar el manejo y la navegación.
+
+El proyecto se trabajó en Android Studio, utilizando XML para los diseños y Kotlin para conectar las pantallas y sus botones. 
+Se incluyeron opciones para comprador, vendedor y administrador.
+
+Finalmente, se realizaron las pruebas correspondientes desde el emulador de Android Studio, obteniendo una compilación correcta.
+
+Quedo atento a las observaciones y recomendaciones que se puedan realizar para continuar ajustando el aplicativo.

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_uf">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:background="@color/azul_osc_uf"
+     android:padding="18dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/marca_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      android:letterSpacing="0.17" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="@string/panel_vendedor_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+ </LinearLayout>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1"
+     android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="18dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="0dp"
+       android:text="@string/control_vendedor_uf"
+       android:textSize="14sp"
+       android:textColor="@color/gris_uf"
+       android:lineSpacingExtra="3dp" />
+
+   <LinearLayout
+       style="@style/TarjUf"
+       android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/productos_registrados_uf"
+        android:textSize="15sp"
+        android:textColor="@color/gris_uf"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:id="@+id/txt_pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/cero_uf"
+        android:textSize="26sp"
+        android:textColor="@color/azul_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/pedidos_recibidos_uf"
+        android:textSize="15sp"
+        android:textColor="@color/gris_uf"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:id="@+id/txt_ped"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/cero_uf"
+        android:textSize="26sp"
+        android:textColor="@color/azul_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/btn_nue"
+       style="@style/BotonUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/nueva_prenda_uf" />
+
+  </LinearLayout>
+
+ </ScrollView>
+
+ <include layout="@layout/barra_ven_uf" />
+
+</LinearLayout>

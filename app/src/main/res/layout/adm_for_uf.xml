@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_uf">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:background="@color/azul_osc_uf"
+     android:padding="18dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/marca_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      android:letterSpacing="0.17" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="@string/nueva_prenda_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+ </LinearLayout>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1"
+     android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="18dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="0dp"
+       android:text="@string/info_prenda_uf"
+       android:textSize="14sp"
+       android:textColor="@color/gris_uf"
+       android:lineSpacingExtra="3dp" />
+
+   <LinearLayout
+       style="@style/TarjUf"
+       android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_prod"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_cam_uf"
+        android:contentDescription="@string/imagen_producto_uf"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:id="@+id/btn_fot"
+        style="@style/BotonBorUf"
+        android:layout_marginTop="8dp"
+        android:text="@string/tomar_foto_uf" />
+
+    <EditText
+        android:id="@+id/edt_nom"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/nombre_producto_uf"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/edt_pre"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/precio_producto_uf"
+        android:inputType="numberDecimal"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/edt_sto"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/cantidad_producto_uf"
+        android:inputType="number"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/tipo_prenda_uf"
+        android:textSize="14sp"
+        android:textColor="@color/texto_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+    <Spinner
+        android:id="@+id/sp_tip"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/campo_uf"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/edt_tal"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/tallas_producto_uf"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/edt_col"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/colores_producto_uf"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/edt_des"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/descripcion_producto_uf"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btn_gua"
+        style="@style/BotonUf"
+        android:layout_marginTop="10dp"
+        android:text="@string/guardar_producto_uf" />
+
+   </LinearLayout>
+
+  </LinearLayout>
+
+ </ScrollView>
+
+ <include layout="@layout/barra_adm_uf" />
+
+</LinearLayout>

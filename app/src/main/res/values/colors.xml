@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="azul_uf">#1457B5</color>
+  <color name="azul_osc_uf">#0A2854</color>
+  <color name="azul_cl_uf">#E8F0FC</color>
+  <color name="fondo_uf">#F5F7FB</color>
+  <color name="texto_uf">#1D2B42</color>
+  <color name="gris_uf">#68758A</color>
+  <color name="borde_uf">#D9E2EF</color>
+  <color name="verde_uf">#198754</color>
+  <color name="rojo_uf">#B83C3C</color>
+  <color name="blanco_uf">#FFFFFF</color>
+</resources>

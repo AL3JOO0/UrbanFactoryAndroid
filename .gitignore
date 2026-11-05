@@ -1,0 +1,13 @@
+# Archivos generados por Android Studio y Gradle
+.gradle/
+.idea/
+.kotlin/
+**/build/
+local.properties
+*.iml
+*.log
+.DS_Store
+captures/
+# Archivos de firma privada
+*.jks
+*.keystore

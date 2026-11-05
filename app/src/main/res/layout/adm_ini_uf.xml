@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_uf">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:background="@color/azul_osc_uf"
+     android:padding="18dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/marca_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      android:letterSpacing="0.17" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="@string/panel_admin_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+ </LinearLayout>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1"
+     android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="18dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="0dp"
+       android:text="@string/gestion_general_uf"
+       android:textSize="14sp"
+       android:textColor="@color/gris_uf"
+       android:lineSpacingExtra="3dp" />
+
+   <LinearLayout
+       style="@style/TarjUf"
+       android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="@string/usuarios_registrados_uf"
+        android:textSize="15sp"
+        android:textColor="@color/gris_uf"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:id="@+id/txt_usu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/cero_uf"
+        android:textSize="26sp"
+        android:textColor="@color/azul_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/productos_activos_uf"
+        android:textSize="15sp"
+        android:textColor="@color/gris_uf"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:id="@+id/txt_pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/cero_uf"
+        android:textSize="26sp"
+        android:textColor="@color/azul_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ventas_simuladas_uf"
+        android:textSize="15sp"
+        android:textColor="@color/gris_uf"
+        android:lineSpacingExtra="3dp" />
+
+    <TextView
+        android:id="@+id/txt_ven"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/venta_cero_uf"
+        android:textSize="26sp"
+        android:textColor="@color/azul_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/btn_usu"
+       style="@style/BotonUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/registrar_usuario_uf" />
+
+   <Button
+       android:id="@+id/btn_pro"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/nueva_prenda_uf" />
+
+   <Button
+       android:id="@+id/btn_ven"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/reporte_ventas_uf" />
+
+   <Button
+       android:id="@+id/btn_sal"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/cerrar_sesion_uf" />
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:text="@string/prototipo_uf"
+       android:textSize="11sp"
+       android:textColor="@color/gris_uf"
+       android:lineSpacingExtra="3dp" />
+
+  </LinearLayout>
+
+ </ScrollView>
+
+ <include layout="@layout/barra_adm_uf" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_uf">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:background="@color/azul_osc_uf"
+     android:padding="18dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/marca_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      android:letterSpacing="0.17" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/ingresar_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="22sp"
+      android:textStyle="bold"
+      android:layout_marginTop="5dp" />
+
+ </LinearLayout>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1"
+     android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="18dp">
+
+   <LinearLayout
+       style="@style/TarjUf"
+       android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenida_uf"
+        android:textSize="18sp"
+        android:textColor="@color/texto_uf"
+        android:textStyle="bold"
+        android:layout_marginTop="0dp"
+        android:lineSpacingExtra="3dp" />
+
+    <EditText
+        android:id="@+id/edt_cor"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/correo_uf"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress" />
+
+    <EditText
+        android:id="@+id/edt_cla"
+        style="@style/CampoUf"
+        android:layout_marginTop="10dp"
+        android:hint="@string/clave_uf"
+        android:inputType="textPassword"
+        android:autofillHints="password" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/rol_uf"
+        android:textSize="14sp"
+        android:textColor="@color/texto_uf"
+        android:textStyle="bold"
+        android:lineSpacingExtra="3dp" />
+
+    <Spinner
+        android:id="@+id/sp_rol"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/campo_uf"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btn_ing"
+        style="@style/BotonUf"
+        android:layout_marginTop="10dp"
+        android:text="@string/ingresar_uf" />
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/btn_bio"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="0dp"
+       android:text="@string/bio_uf" />
+
+   <Button
+       android:id="@+id/btn_reg"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/registro_uf" />
+
+   <Button
+       android:id="@+id/btn_cla"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/recuperar_uf" />
+
+  </LinearLayout>
+
+ </ScrollView>
+
+</LinearLayout>
