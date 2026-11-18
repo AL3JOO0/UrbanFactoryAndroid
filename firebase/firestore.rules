@@ -1,0 +1,79 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function identificado() {
+      return request.auth != null;
+    }
+    function rutaPerfil() {
+      return /databases/$(database)/documents/usuarios/$(request.auth.uid);
+    }
+    function activo() {
+      return identificado() && exists(rutaPerfil()) && get(rutaPerfil()).data.activo == true;
+    }
+    function esAdministrador() {
+      return activo() && request.auth.token.rol == 'Administrador';
+    }
+    function esVendedor() {
+      return activo() && request.auth.token.rol == 'Vendedor';
+    }
+    function administraCatalogo() {
+      return esAdministrador() || esVendedor();
+    }
+
+    match /usuarios/{uid} {
+      allow create: if identificado()
+        && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.rol == 'Comprador'
+        && request.resource.data.activo == true;
+      allow get: if identificado() && (request.auth.uid == uid || esAdministrador());
+      allow list: if esAdministrador();
+      allow update: if esAdministrador()
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['nombre', 'telefono', 'direccion', 'activo', 'correo'])
+        || activo() && request.auth.uid == uid
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['nombre', 'telefono', 'direccion']);
+      allow delete: if false;
+    }
+
+    match /carritos/{uid} {
+      allow read, delete: if activo() && request.auth.uid == uid;
+      allow create, update: if activo() && request.auth.uid == uid
+        && request.resource.data.uid == uid
+        && request.resource.data.items is list
+        && request.resource.data.items.size() <= 40;
+    }
+
+    match /prendas/{id} {
+      allow read: if activo();
+      allow create, update: if administraCatalogo()
+        && request.resource.data.precio is int
+        && request.resource.data.precio > 0
+        && request.resource.data.stock is int
+        && request.resource.data.stock >= 0;
+      allow delete: if esAdministrador();
+    }
+
+    match /pedidos/{id} {
+      allow read: if activo()
+        && (resource.data.uid == request.auth.uid || administraCatalogo());
+      allow create: if activo()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.estado == 'Pendiente de pago'
+        && request.resource.data.total is int
+        && request.resource.data.total > 0;
+      allow update: if activo() && (
+        (resource.data.uid == request.auth.uid
+          && resource.data.estado == 'Pendiente de pago'
+          && request.resource.data.estado == 'Cancelado'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['estado']))
+        ||
+        (administraCatalogo() && resource.data.estado == 'Pagado'
+          && request.resource.data.estado in ['En preparación', 'Despachado', 'Entregado']
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['estado']))
+      );
+      allow delete: if false;
+    }
+  }
+}

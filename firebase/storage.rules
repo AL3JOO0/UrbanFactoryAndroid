@@ -1,0 +1,20 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function activo() {
+      return request.auth != null
+        && firestore.exists(/databases/(default)/documents/usuarios/$(request.auth.uid))
+        && firestore.get(/databases/(default)/documents/usuarios/$(request.auth.uid)).data.activo == true;
+    }
+    function manejaProductos() {
+      return activo()
+        && (request.auth.token.rol == 'Vendedor' || request.auth.token.rol == 'Administrador');
+    }
+    match /fotos/{uid}/{archivo} {
+      allow read: if activo();
+      allow write: if manejaProductos() && request.auth.uid == uid
+        && request.resource.size < 5 * 1024 * 1024
+        && request.resource.contentType.matches('image/.*');
+    }
+  }
+}

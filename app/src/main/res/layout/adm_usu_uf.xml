@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/fondo_uf">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="@color/azul_osc_uf" android:padding="18dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/marca_uf" android:textSize="13sp" android:textStyle="bold"
+            android:textColor="@color/blanco_uf" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/gestionar_usuarios_uf" android:textSize="22sp" android:textStyle="bold"
+            android:textColor="@color/blanco_uf" />
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="18dp" android:orientation="vertical">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/registro_usuarios_uf" android:textColor="@color/gris_uf" android:textSize="14sp" android:layout_marginBottom="12dp" />
+    <Button android:id="@+id/btn_nue" style="@style/BotonUf" android:layout_marginTop="12dp" android:text="@string/nuevo_usuario_uf" />
+    <LinearLayout android:id="@+id/lista_uf" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/barra_adm_uf" />
+</LinearLayout>

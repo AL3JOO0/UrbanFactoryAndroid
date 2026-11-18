@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "789802996887",
+    "project_id": "urbanfactory01",
+    "storage_bucket": "urbanfactory01.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789802996887:android:48f00098d10a5acb9dc5d2",
+        "android_client_info": {
+          "package_name": "com.urbanfactory.uf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaGkZHFINLr0eXEUJv9vzVn12ZKJ9zg64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

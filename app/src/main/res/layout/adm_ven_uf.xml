@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/fondo_uf">
+ <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@color/azul_osc_uf" android:padding="18dp">
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="URBAN FACTORY" android:textColor="@color/blanco_uf" android:textSize="13sp" android:textStyle="bold" android:letterSpacing="0.17"/>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Reporte de ventas" android:textColor="@color/blanco_uf" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="5dp"/>
+ </LinearLayout>
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+
+   <LinearLayout style="@style/TarjUf" android:orientation="vertical"><TextView  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Pedidos registrados" android:textSize="15sp" android:textColor="@color/gris_uf"  android:layout_marginTop="0dp" android:lineSpacingExtra="3dp"/><TextView android:id="@+id/txt_ped" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:textSize="27sp" android:textColor="@color/azul_uf" android:textStyle="bold" android:layout_marginTop="6dp" android:lineSpacingExtra="3dp"/><TextView  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Valor acumulado" android:textSize="15sp" android:textColor="@color/gris_uf"  android:layout_marginTop="15dp" android:lineSpacingExtra="3dp"/><TextView android:id="@+id/txt_tot" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="$ 0" android:textSize="27sp" android:textColor="@color/azul_uf" android:textStyle="bold" android:layout_marginTop="6dp" android:lineSpacingExtra="3dp"/></LinearLayout><TextView  android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detalle de pedidos" android:textSize="18sp" android:textColor="@color/texto_uf" android:textStyle="bold" android:layout_marginTop="15dp" android:lineSpacingExtra="3dp"/><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/lista_uf" android:layout_marginTop="12dp"></LinearLayout>
+  </LinearLayout>
+ </ScrollView>
+ <include layout="@layout/barra_adm_uf"/>
+</LinearLayout>

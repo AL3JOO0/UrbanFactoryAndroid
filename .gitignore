@@ -1,0 +1,27 @@
+# Archivos creados por Android Studio y Gradle
+.gradle/
+.idea/
+.kotlin/
+**/build/
+local.properties
+*.iml
+*.log
+.DS_Store
+captures/
+
+# Archivos privados: nunca publicarlos en el repositorio
+*.jks
+*.keystore
+.env
+.env.*
+firebase/*firebase-adminsdk*.json
+**/*service-account*.json
+**/*serviceAccount*.json
+firebase/node_modules/
+servidor/**/node_modules/
+
+# Archivos pesados de trabajo
+*.zip
+
+# Se conserva app/google-services.json para que Android Studio pueda compilar.
+# Este archivo configura el cliente; NO es una clave privada de administrador.

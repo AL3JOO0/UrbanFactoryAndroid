@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fondo_uf">
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:background="@color/azul_osc_uf"
+     android:padding="18dp">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/marca_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="13sp"
+      android:textStyle="bold"
+      android:letterSpacing="0.17" />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="@string/recuperar_acceso_uf"
+      android:textColor="@color/blanco_uf"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+ </LinearLayout>
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="0dp"
+     android:layout_weight="1"
+     android:fillViewport="true">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="18dp">
+
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="0dp"
+       android:text="@string/solicitud_correo_uf"
+       android:textSize="14sp"
+       android:textColor="@color/gris_uf"
+       android:lineSpacingExtra="3dp" />
+
+   <LinearLayout
+       style="@style/TarjUf"
+       android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edt_cor"
+        style="@style/CampoUf"
+        android:layout_marginTop="0dp"
+        android:hint="@string/correo_registrado_uf"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress" />
+
+    <Button
+        android:id="@+id/btn_env"
+        style="@style/BotonUf"
+        android:layout_marginTop="10dp"
+        android:text="@string/enviar_solicitud_uf" />
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/btn_vol"
+       style="@style/BotonBorUf"
+       android:layout_marginTop="10dp"
+       android:text="@string/volver_ingreso_uf" />
+
+  </LinearLayout>
+
+ </ScrollView>
+
+</LinearLayout>
